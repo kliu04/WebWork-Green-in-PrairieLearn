@@ -5,9 +5,12 @@ for (let bar of progressBars) {
   bar.title = bar.textContent;
   if (value >= 100) {
     stars = '★'.repeat(Math.round((value - 100) / 10) + 1);
-    bar.style.setProperty('background-color', '#1E8556', 'important');
+    bar.style.setProperty('background-color', '#88FF88', 'important');
     bar.style.setProperty('color', 'black');
     content = value > 100 ? ` ${value}% ` : 'Perfect';
     bar.innerHTML = `${stars}${content}${stars}`;
+  }
+  else {
+    bar.style.setProperty('background-color', '#88FF88', 'important');
   }
 }
